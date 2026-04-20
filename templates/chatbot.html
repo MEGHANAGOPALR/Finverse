@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finny - AI Chatbot</title>
+    
+    <style>
+        /* Classy, neat, professional color scheme */
+        :root {
+            --primary-color: #059669; /* Emerald Green */
+            --secondary-color: #10b981; 
+            --background-color: #f7f9fb; 
+            --card-background: #ffffff; 
+            --text-color: #374151; 
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --error-color: #ef4444;
+            --info-color: #3b82f6;
+            --user-bubble-bg: #d1fae5; /* Very light green for user */
+            --bot-bubble-bg: #ffffff; /* White for bot */
+            --system-bg: #fffbe6; /* Light yellow for system messages */
+            --border-color: #e5e7eb;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--background-color);
+            margin: 0;
+            color: var(--text-color);
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* --- Sidebar Navigation --- */
+        .sidebar {
+            width: 250px;
+            background-color: var(--card-background);
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid var(--border-color);
+        }
+
+        .sidebar h2 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .nav-item {
+            padding: 12px 20px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: background-color 0.2s, color 0.2s;
+            display: block;
+            border-left: 5px solid transparent;
+        }
+
+        .nav-item:hover {
+            background-color: #e0f2f1;
+        }
+        
+        .nav-item.active {
+            background-color: #ccfbf1;
+            color: var(--primary-color);
+            border-left: 5px solid var(--primary-color);
+        }
+        
+        /* --- Chat Specific Styles --- */
+        .chat-container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            max-height: 100vh;
+            background-color: var(--card-background);
+        }
+
+        .chat-header {
+            padding: 15px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat-messages {
+            flex-grow: 1;
+            padding: 20px 30px;
+            overflow-y: auto;
+            background-color: var(--background-color);
+            /* Calculate height based on screen height minus header/input */
+            height: calc(100vh - 150px); 
+        }
+
+        .message-container {
+            margin-bottom: 15px;
+            display: flex;
+        }
+
+        .message-container.user {
+            justify-content: flex-end;
+        }
+
+        .message-container.bot, .message-container.system {
+            justify-content: flex-start;
+        }
+
+        .message-bubble {
+            max-width: 70%;
+            padding: 12px 18px;
+            border-radius: 20px;
+            line-height: 1.5;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        .message-container.user .message-bubble {
+            background-color: var(--user-bubble-bg);
+            color: var(--text-color);
+            border-bottom-right-radius: 4px;
+        }
+
+        .message-container.bot .message-bubble {
+            background-color: var(--bot-bubble-bg);
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            border-bottom-left-radius: 4px;
+        }
+        
+        .message-bubble strong {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .system-message {
+            text-align: center;
+            font-style: italic;
+            color: #6b7280;
+            margin: 15px 0;
+            padding: 10px;
+            background-color: var(--system-bg);
+            border: 1px solid #fde68a;
+            border-radius: 6px;
+        }
+        
+        .system-message.error {
+            background-color: #fee2e2;
+            color: var(--error-color);
+            border-color: var(--error-color);
+        }
+
+        /* --- Input Area --- */
+        .chat-input {
+            padding: 15px 30px;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            background-color: var(--card-background);
+        }
+
+        #message-input {
+            flex-grow: 1;
+            padding: 10px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            font-size: 1rem;
+            resize: none; 
+            height: 40px; 
+            transition: border-color 0.2s;
+            line-height: 1.5;
+            box-sizing: border-box;
+        }
+        
+        #message-input:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 1px var(--primary-color);
+        }
+
+        #send-button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        #send-button:hover:not(:disabled) {
+            background-color: #047857;
+        }
+
+        #send-button:disabled {
+            background-color: #a7f3d0;
+            cursor: not-allowed;
+        }
+        
+        /* --- Chat List Sidebar --- */
+        .chat-list-section {
+            padding: 0 20px;
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+        
+        .chat-list-section h3 {
+            font-size: 1rem;
+            color: #6b7280;
+            margin-top: 0;
+            padding-top: 10px;
+            border-top: 1px solid var(--border-color);
+            margin-bottom: 10px;
+        }
+        
+        #chat-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .chat-item {
+            padding: 10px 15px;
+            margin-bottom: 5px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.1s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .chat-item:hover:not(.active) {
+            background-color: #f0fdf4;
+        }
+        
+        .chat-item.active {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: bold;
+        }
+        
+        .chat-item.active .rename-btn {
+            color: white;
+            background-color: #047857;
+        }
+        
+        .rename-btn {
+            background: none;
+            border: 1px solid #d1d5db;
+            color: #6b7280;
+            border-radius: 4px;
+            padding: 2px 6px;
+            margin-left: 10px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: background-color 0.1s;
+        }
+        
+        .rename-btn:hover {
+            background-color: #e5e7eb;
+        }
+
+        #new-chat-button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: var(--info-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        #new-chat-button:hover {
+            background-color: #2563eb;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="sidebar">
+        <h2>Finny AI</h2>
+        <a href="/dashboard" class="nav-item">Dashboard</a>
+        <a href="/chatbot" class="nav-item active">Chatbot</a>
+        <a href="/profile" class="nav-item">Profile</a>
+        
+        <div class="chat-list-section">
+            <h3>Conversations</h3>
+            <ul id="chat-list">
+                <li><span class="loading-item">Loading chats...</span></li>
+            </ul>
+        </div>
+        
+        <button id="new-chat-button">Start New Chat</button>
+        
+        <a href="#" id="logout-link" class="nav-item" style="margin-top: 20px; color: var(--error-color); border-left-color: transparent;">Log Out</a>
+    </div>
+
+    <div class="chat-container">
+        
+        <div class="chat-header">
+            <span id="chat-name-display">Welcome to Finny Chatbot</span>
+        </div>
+
+        <div id="chat-messages" class="chat-messages">
+            <div class="system-message">
+                Please select a chat from the sidebar or click "Start New Chat" to begin a conversation with Finny, your AI Financial Planner.
+            </div>
+            </div>
+
+        <div class="chat-input">
+            <textarea 
+                id="message-input" 
+                placeholder="Ask Finny about your budget, savings, or transactions (e.g., What was my biggest expense last month?)" 
+                rows="1"
+                disabled
+            ></textarea>
+            <button id="send-button" disabled title="Send Message">
+                &#10148;
+            </button>
+        </div>
+        
+    </div>
+
+    <script type="module">
+        import { clearUserSession, getAbsoluteUrl } from '/static/js/utils.js';
+        
+        // --- Initialization ---
+        document.addEventListener('DOMContentLoaded', () => {
+            // Logout functionality (from utils.js)
+            document.getElementById('logout-link').addEventListener('click', (e) => {
+                e.preventDefault();
+                clearUserSession();
+                window.location.href = getAbsoluteUrl('/login');
+            });
+        });
+    </script>
+    <script type="module" src="/static/js/chatbot.js"></script>
+</body>
+</html>

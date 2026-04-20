@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finny - Financial Onboarding</title>
+    <style>
+        /* Classy, neat, professional color scheme */
+        :root {
+            --primary-color: #059669; /* Emerald Green */
+            --background-color: #f7f9fb; /* Light background */
+            --card-background: #ffffff; /* White cards */
+            --text-color: #374151; /* Dark Gray text */
+            --input-border: #d1d5db;
+            --section-bg: #f3f4f6; /* Light gray for sections */
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --success-color: #10b981;
+            --info-color: #3b82f6;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--background-color);
+            padding: 2rem 1rem;
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--card-background);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            padding: 2rem;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 0.5rem;
+            font-size: 2rem;
+        }
+
+        p.subtitle {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #6b7280;
+        }
+
+        .section {
+            background-color: var(--section-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border: 1px solid #e5e7eb;
+        }
+
+        .section h2 {
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            margin-top: 0;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .input-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.3rem;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        input[type="number"],
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--input-border);
+            border-radius: 6px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, select:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 1px var(--primary-color);
+        }
+
+        .toggle-group {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px dashed #e5e7eb;
+        }
+        
+        .toggle-group:last-child {
+            border-bottom: none;
+        }
+        
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 24px;
+        }
+
+        .toggle-switch input { 
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 24px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: var(--primary-color);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(16px);
+        }
+
+        .hidden-fields {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+            padding-left: 1rem;
+            margin-top: 1rem;
+            border-left: 3px solid var(--secondary-color);
+        }
+        
+        .hidden-fields.show {
+            max-height: 500px; /* Large enough value to show content */
+        }
+        
+        .metric-card {
+            background-color: #e0f2f1; /* Light Green */
+            border: 1px solid var(--success-color);
+            border-left: 5px solid var(--success-color);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .metric-card.debt {
+            background-color: #fee2e2; /* Light Red */
+            border-left: 5px solid #ef4444;
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 2rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            background-color: #047857;
+        }
+
+        .btn-primary:disabled {
+            background-color: #a7f3d0;
+            cursor: not-allowed;
+        }
+        
+        .error-message {
+            color: #ef4444;
+            background-color: #fee2e2;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            display: none;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        .user-info {
+            background-color: var(--info-color);
+            color: white;
+            padding: 0.75rem;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Financial Onboarding</h1>
+        <p class="subtitle">Tell us about your finances so we can provide the best guidance.</p>
+        
+        <div id="user-info" class="user-info">
+            Loading user profile...
+        </div>
+        
+        <div id="onboarding-error" class="error-message"></div>
+
+        <form id="onboarding-form">
+            
+            <div class="section">
+                <h2>1. Income & Budget</h2>
+                <div class="input-group">
+                    <label for="monthly_net_salary">Monthly Net Salary (After Tax, $)</label>
+                    <input type="number" id="monthly_net_salary" name="monthly_net_salary" required value="0" min="0" oninput="calculateMetrics()">
+                </div>
+                <div class="input-group">
+                    <label for="other_monthly_income">Other Monthly Income ($)</label>
+                    <input type="number" id="other_monthly_income" name="other_monthly_income" value="0" min="0" oninput="calculateMetrics()">
+                </div>
+                <div class="input-group">
+                    <label for="monthly_expenditure">Estimated Monthly Fixed Expenditure ($)</label>
+                    <input type="number" id="monthly_expenditure" name="monthly_expenditure" required value="0" min="0" oninput="calculateMetrics()">
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>2. Savings & Safety Net</h2>
+                <div class="input-group">
+                    <label for="total_liquid_savings">Total Liquid Savings ($)</label>
+                    <input type="number" id="total_liquid_savings" name="total_liquid_savings" required value="0" min="0" oninput="calculateMetrics()">
+                </div>
+                
+                <div class="toggle-group">
+                    <label>Do you have a dedicated Emergency Fund?</label>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="has_emergency_fund" name="has_emergency_fund" onchange="toggleEmergencyFundFields()">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                
+                <div id="emergency-fund-fields" class="hidden-fields">
+                    <div class="input-group">
+                        <label for="emergency_fund_months">Emergency Fund covers (Months of Expenditure)</label>
+                        <input type="number" id="emergency_fund_months" name="emergency_fund_months" value="0" min="0" oninput="calculateMetrics()">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>3. Debt</h2>
+                <div class="toggle-group">
+                    <label>Do you currently have any significant debt (e.g., credit card, loan)?</label>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="has_debt" name="has_debt" onchange="toggleDebtFields(); calculateMetrics()">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                
+                <div id="debt-fields" class="hidden-fields">
+                    <div class="input-group">
+                        <label for="total_debt_amount">Total Outstanding Debt Amount ($)</label>
+                        <input type="number" id="total_debt_amount" name="total_debt_amount" value="0" min="0" oninput="calculateMetrics()">
+                    </div>
+                    <div class="input-group">
+                        <label for="average_interest_rate">Average Interest Rate (%)</label>
+                        <input type="number" id="average_interest_rate" name="average_interest_rate" value="0" min="0" max="100">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>4. Goals & Risk Tolerance</h2>
+                <div class="input-group">
+                    <label for="risk_tolerance_level">Investment Risk Tolerance (1=Low, 10=High)</label>
+                    <input type="range" id="risk_tolerance_level" name="risk_tolerance_level" min="1" max="10" value="5" oninput="document.getElementById('risk-value').textContent=this.value">
+                    <p style="text-align: center; margin-top: 0.5rem;"><span id="risk-value">5</span> / 10</p>
+                </div>
+                
+                <div class="input-group">
+                    <label for="financial_goals">Primary Financial Goal (e.g., Retire by 50, Save for a house)</label>
+                    <input type="text" id="financial_goals" name="financial_goals" placeholder="Briefly describe your main goal">
+                </div>
+            </div>
+
+            <div class="section" style="border-left: 5px solid var(--info-color);">
+                <h2>Calculated Metrics</h2>
+                <div id="net-worth-card" class="metric-card">
+                    Current Net Worth: $0.00
+                </div>
+                <div id="surplus-card" class="metric-card">
+                    Monthly Cash Surplus/Deficit: $0.00
+                </div>
+            </div>
+
+            <button type="submit" id="save-onboarding-button" class="btn-primary">Save Profile and Go to Dashboard</button>
+        </form>
+    </div>
+
+    <script type="module">
+        import { getUserId, apiFetch, getAbsoluteUrl } from '/static/js/utils.js';
+
+        // Get user ID from URL parameters
+        function getUserIdFromUrl() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('user_id');
+        }
+
+        let currentUserId = getUserId() || getUserIdFromUrl();
+
+        // --- Helper Functions ---
+        
+        function setLoading(isLoading) {
+            const button = document.getElementById('save-onboarding-button');
+            button.disabled = isLoading;
+            button.textContent = isLoading ? 'Saving...' : 'Save Profile and Go to Dashboard';
+        }
+
+        function toggleEmergencyFundFields() {
+            const checkbox = document.getElementById('has_emergency_fund');
+            const fieldsContainer = document.getElementById('emergency-fund-fields');
+            fieldsContainer.classList.toggle('show', checkbox.checked);
+            // Optional: make months field required if box is checked
+            document.getElementById('emergency_fund_months').required = checkbox.checked;
+        }
+        
+        function toggleDebtFields() {
+            const checkbox = document.getElementById('has_debt');
+            const fieldsContainer = document.getElementById('debt-fields');
+            fieldsContainer.classList.toggle('show', checkbox.checked);
+            // Optional: make debt amount required if box is checked
+            document.getElementById('total_debt_amount').required = checkbox.checked;
+        }
+        
+        // --- Core Logic ---
+        
+        /**
+         * Fetches existing profile data and populates the form.
+         * This handles cases where a user returns to the onboarding page later.
+         */
+        async function loadProfile() {
+            if (!currentUserId) {
+                alert('User ID is missing. Please login or signup.');
+                window.location.href = getAbsoluteUrl('/login');
+                return;
+            }
+            
+            const infoElement = document.getElementById('user-info');
+            infoElement.textContent = `User ID: ${currentUserId}. Loading profile...`;
+
+            try {
+                const profile = await apiFetch(getAbsoluteUrl(`/api/profile/${currentUserId}`), 'GET');
+                
+                infoElement.textContent = `Profile for ${profile.name} (${profile.email})`;
+
+                // Populate form fields from the 'onboarding' sub-object
+                const onboardingData = profile.onboarding || {};
+
+                for (const key in onboardingData) {
+                    const input = document.getElementById(key);
+                    if (input) {
+                        const value = onboardingData[key];
+                        if (input.type === 'checkbox') {
+                            input.checked = !!value;
+                        } else {
+                            // Convert null/undefined to 0 for number inputs
+                            input.value = value === null || value === undefined ? 0 : value;
+                        }
+                    }
+                }
+                
+                // Manually trigger toggles based on loaded data
+                toggleEmergencyFundFields();
+                toggleDebtFields();
+                // Update range display
+                document.getElementById('risk-value').textContent = document.getElementById('risk_tolerance_level').value;
+                
+                // Calculate metrics with loaded data
+                calculateMetrics(); 
+                
+            } catch (error) {
+                console.error("Error loading profile:", error);
+                infoElement.textContent = `Error: Failed to load profile. ${error.message}`;
+            }
+        }
+        
+        /**
+         * Calculates and displays client-side financial metrics (Net Worth, Surplus).
+         */
+        function calculateMetrics() {
+            const netSalary = parseFloat(document.getElementById('monthly_net_salary').value) || 0;
+            const otherIncome = parseFloat(document.getElementById('other_monthly_income').value) || 0;
+            const expenditure = parseFloat(document.getElementById('monthly_expenditure').value) || 0;
+            const savings = parseFloat(document.getElementById('total_liquid_savings').value) || 0;
+            const totalDebt = parseFloat(document.getElementById('total_debt_amount').value) || 0;
+            
+            // 1. Calculate Monthly Cash Surplus/Deficit
+            const totalIncome = netSalary + otherIncome;
+            const cashSurplus = totalIncome - expenditure;
+            
+            // 2. Calculate Net Worth (Simplified: Savings - Debt)
+            const netWorth = savings - totalDebt;
+
+            // Display Results
+            const netWorthCard = document.getElementById('net-worth-card');
+            netWorthCard.textContent = `Current Net Worth: $${netWorth.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+            netWorthCard.classList.toggle('debt', netWorth < 0);
+            
+            const surplusCard = document.getElementById('surplus-card');
+            surplusCard.textContent = `Monthly Cash Surplus/Deficit: $${cashSurplus.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+            surplusCard.classList.toggle('debt', cashSurplus < 0);
+        }
+
+        /**
+         * Handles the form submission to save all onboarding data.
+         */
+        async function handleSave(event) {
+            event.preventDefault();
+            const form = event.target;
+            const errorMessage = document.getElementById('onboarding-error');
+            errorMessage.style.display = 'none';
+            setLoading(true);
+
+            // 1. Collect all data from the form
+            const formData = new FormData(form);
+            const rawData = Object.fromEntries(formData.entries());
+            
+            // 2. Structure data for the API (convert strings/checkboxes to correct types)
+            const onboardingPayload = {
+                // Ensure number fields are stored as numbers
+                age: 0, // Age field removed for simplicity, defaults to 0
+                monthly_net_salary: parseFloat(rawData.monthly_net_salary) || 0,
+                annual_gross_income: (parseFloat(rawData.monthly_net_salary) || 0) * 12, // Simple calculation stub
+                monthly_expenditure: parseFloat(rawData.monthly_expenditure) || 0,
+                other_monthly_income: parseFloat(rawData.other_monthly_income) || 0,
+                total_liquid_savings: parseFloat(rawData.total_liquid_savings) || 0,
+                emergency_fund_months: parseFloat(rawData.emergency_fund_months) || 0,
+                total_debt_amount: parseFloat(rawData.total_debt_amount) || 0,
+                average_interest_rate: parseFloat(rawData.average_interest_rate) || 0,
+                risk_tolerance_level: parseInt(rawData.risk_tolerance_level) || 5,
+                financial_goals: rawData.financial_goals,
+                
+                // Checkboxes are handled by the 'name' attribute
+                has_emergency_fund: document.getElementById('has_emergency_fund').checked,
+                has_debt: document.getElementById('has_debt').checked,
+            };
+            
+            // The API expects the onboarding data nested inside an 'onboarding' key
+            const apiPayload = {
+                onboarding: onboardingPayload,
+                // Include user_id for the login_required decorator in Flask
+                user_id: currentUserId 
+            };
+            
+            // 3. Send data to the backend
+            try {
+                const url = getAbsoluteUrl(`/api/profile/${currentUserId}`);
+                const response = await apiFetch(url, 'POST', apiPayload);
+
+                if (response.success) {
+                    // Success: Redirect to Dashboard
+                    window.location.href = getAbsoluteUrl('/dashboard');
+                } else {
+                    throw new Error(response.message || 'Failed to save data.');
+                }
+            } catch (error) {
+                console.error("Save failed:", error);
+                errorMessage.textContent = error.message || 'A network error occurred. Please try again.';
+                errorMessage.style.display = 'block';
+            } finally {
+                setLoading(false);
+            }
+        }
+        
+        // --- Initialization ---
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load profile data when the page loads
+            loadProfile(); 
+            
+            // Attach event listeners
+            document.getElementById('onboarding-form').addEventListener('submit', handleSave);
+            document.getElementById('has_emergency_fund').addEventListener('change', toggleEmergencyFundFields);
+            document.getElementById('has_debt').addEventListener('change', toggleDebtFields);
+            
+            // Initial metric calculation in case the user arrived via direct link
+            calculateMetrics(); 
+        });
+    </script>
+</body>
+</html>

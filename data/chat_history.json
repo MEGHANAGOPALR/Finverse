@@ -1,0 +1,57 @@
+{
+  "user_001": {
+    "Investment Chat": [
+      {
+        "timestamp": "2025-11-08T12:00:00Z",
+        "role": "user",
+        "content": "How to start investing?"
+      },
+      {
+        "timestamp": "2025-11-08T12:00:05Z",
+        "role": "bot",
+        "content": "Start by identifying your goals..."
+      }
+    ],
+    "Savings Plan": [
+      {
+        "timestamp": "2025-11-09T09:00:00Z",
+        "role": "user",
+        "content": "Tell me about savings accounts."
+      }
+    ]
+  },
+  "user_b64fa55a": {
+    "budget": [
+      {
+        "timestamp": "2025-11-18T17:42:45.646968",
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "timestamp": "2025-11-18T17:42:45.690895",
+        "role": "bot",
+        "content": "Hello, I am Finny, your AI Financial Planner. How can I assist you today, Demo User?"
+      },
+      {
+        "timestamp": "2025-11-18T17:43:22.603079",
+        "role": "user",
+        "content": "i have 50000 in my savings account. how can i invest it?"
+      },
+      {
+        "timestamp": "2025-11-18T17:43:22.645818",
+        "role": "bot",
+        "content": "Based on your profile:\n* Your primary financial goal is: **Retire by 50, Save for a house**.\n* Your reported liquid savings: **$15,000.00**.\n\n**Action:** Consider setting up an automated transfer to grow this amount steadily. Do you want tips on low-risk investments?"
+      },
+      {
+        "timestamp": "2025-11-18T17:43:37.693464",
+        "role": "user",
+        "content": "yes"
+      },
+      {
+        "timestamp": "2025-11-18T17:43:37.735509",
+        "role": "bot",
+        "content": "I need a real AI to answer that complex question! I'm currently running on a simplified stub. **To integrate real AI (like Gemini), replace this `generate_ai_stub_response` function.**\nAsk me about **savings** or **transactions** for a simple demo."
+      }
+    ]
+  }
+}

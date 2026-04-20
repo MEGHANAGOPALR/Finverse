@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finny - Sign Up</title>
+    <style>
+        /* Classy, neat, professional color scheme */
+        :root {
+            --primary-color: #059669; /* Emerald Green */
+            --secondary-color: #10b981; /* Lighter Green */
+            --background-color: #f7f9fb; /* Light background */
+            --card-background: #ffffff; /* White cards */
+            --text-color: #374151; /* Dark Gray text */
+            --error-color: #ef4444; /* Red for errors */
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--background-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .signup-container {
+            width: 100%;
+            max-width: 450px;
+            padding: 2.5rem;
+            background-color: var(--card-background);
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.75rem;
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: var(--text-color);
+        }
+
+        input[type="text"],
+        input[type="email"], 
+        input[type="password"] {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            box-sizing: border-box; 
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            background-color: #047857; 
+        }
+
+        .btn-primary:disabled {
+            background-color: #a7f3d0;
+            cursor: not-allowed;
+        }
+
+        .link-text {
+            text-align: center;
+            margin-top: 1.5rem;
+            color: var(--text-color);
+        }
+        
+        .link-text a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .link-text a:hover {
+            text-decoration: underline;
+        }
+        
+        .error-message {
+            color: var(--error-color);
+            background-color: #fee2e2;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            display: none; 
+            text-align: center;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h1>Create Your Account</h1>
+        
+        <div id="signup-form-error" class="error-message"></div>
+        
+        <form id="signup-form">
+            <div class="input-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="Lakshita Bopaiah">
+            </div>
+            
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="you@example.com">
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="••••••••">
+            </div>
+
+            <div class="input-group">
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" id="confirm_password" name="confirm_password" required placeholder="••••••••">
+            </div>
+            
+            <button type="submit" id="signup-form-button" class="btn-primary">Sign Up</button>
+        </form>
+        
+        <p class="link-text">
+            Already have an account? <a href="/login">Log In here</a>
+        </p>
+    </div>
+
+    <script type="module">
+        // Import handleSignup from auth.js
+        import { handleSignup } from '/static/js/auth.js';
+        
+        // Attach the form submission handler
+        document.addEventListener('DOMContentLoaded', () => {
+            const signupForm = document.getElementById('signup-form');
+            if (signupForm) {
+                signupForm.addEventListener('submit', handleSignup);
+            }
+        });
+    </script>
+</body>
+</html>

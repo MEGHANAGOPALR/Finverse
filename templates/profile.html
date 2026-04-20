@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finny - User Profile</title>
+    
+    <style>
+        /* Classy, neat, professional color scheme */
+        :root {
+            --primary-color: #059669; /* Emerald Green */
+            --background-color: #f7f9fb; 
+            --card-background: #ffffff; 
+            --text-color: #374151; 
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --info-color: #3b82f6;
+            --error-color: #ef4444;
+            --border-color: #e5e7eb;
+            --secondary-color: #10b981;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--background-color);
+            margin: 0;
+            color: var(--text-color);
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* --- Sidebar Navigation --- */
+        .sidebar {
+            width: 250px;
+            background-color: var(--card-background);
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid var(--border-color);
+        }
+
+        .sidebar h2 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .nav-item {
+            padding: 12px 20px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: background-color 0.2s, color 0.2s;
+            display: block;
+            border-left: 5px solid transparent;
+        }
+
+        .nav-item:hover {
+            background-color: #e0f2f1;
+        }
+        
+        .nav-item.active {
+            background-color: #ccfbf1;
+            color: var(--primary-color);
+            border-left: 5px solid var(--primary-color);
+        }
+
+        /* --- Main Content --- */
+        .main-content {
+            flex-grow: 1;
+            padding: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .profile-card {
+            background-color: var(--card-background);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            margin-top: 20px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: var(--info-color);
+            font-size: 1.25rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: var(--text-color);
+        }
+
+        input[type="text"],
+        input[type="email"], 
+        input[type="password"] {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+
+        .btn-primary {
+            padding: 12px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            background-color: #047857; 
+        }
+
+        .btn-primary:disabled {
+            background-color: #a7f3d0;
+            cursor: not-allowed;
+        }
+        
+        .btn-secondary {
+            padding: 10px 15px;
+            background-color: #f3f4f6;
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #e5e7eb;
+        }
+
+        .message-box {
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        #success-message {
+            background-color: #d1fae5;
+            color: var(--primary-color);
+            display: none;
+        }
+        
+        #error-message {
+            background-color: #fee2e2;
+            color: var(--error-color);
+            display: none;
+        }
+        
+        .onboarding-summary {
+            background-color: #ecfdf5;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 5px solid var(--secondary-color);
+            margin-top: 15px;
+        }
+        
+        .onboarding-summary p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="sidebar">
+        <h2>Finny AI</h2>
+        <a href="/dashboard" class="nav-item">Dashboard</a>
+        <a href="/chatbot" class="nav-item">Chatbot</a>
+        <a href="/profile" class="nav-item active">Profile</a>
+        <a href="#" id="logout-link" class="nav-item" style="margin-top: auto; color: var(--error-color);">Log Out</a>
+    </div>
+
+    <div class="main-content">
+        <h1>User Profile & Settings</h1>
+
+        <div id="success-message" class="message-box"></div>
+        <div id="error-message" class="message-box"></div>
+        
+        <div class="profile-card">
+            
+            <h2>Personal Information</h2>
+            <form id="profile-form">
+                <input type="hidden" id="user-id-field" name="user_id">
+                
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="new_password">New Password (Leave blank to keep current)</label>
+                    <input type="password" id="new_password" name="password" placeholder="••••••••">
+                </div>
+                
+                <button type="submit" id="save-profile-button" class="btn-primary">Save Changes</button>
+            </form>
+            
+            <h2>Financial Onboarding Data</h2>
+            <div id="onboarding-summary" class="onboarding-summary">
+                <p>Loading financial data...</p>
+            </div>
+            <a href="/onboarding" class="btn-secondary">Edit Onboarding Data</a>
+        </div>
+        
+    </div>
+
+    <script type="module">
+        import { getUserId, getAbsoluteUrl, apiFetch, clearUserSession } from '/static/js/utils.js';
+
+        let currentUserId = getUserId();
+        
+        // --- Helper Functions ---
+        function setLoading(isLoading) {
+            const button = document.getElementById('save-profile-button');
+            button.disabled = isLoading;
+            button.textContent = isLoading ? 'Saving...' : 'Save Changes';
+        }
+        
+        function showMessage(type, message) {
+            const successBox = document.getElementById('success-message');
+            const errorBox = document.getElementById('error-message');
+            successBox.style.display = 'none';
+            errorBox.style.display = 'none';
+            
+            if (type === 'success') {
+                successBox.textContent = message;
+                successBox.style.display = 'block';
+            } else if (type === 'error') {
+                errorBox.textContent = message;
+                errorBox.style.display = 'block';
+            }
+        }
+        
+        // --- Core Logic ---
+        
+        /**
+         * Loads user profile data and populates the form and summary.
+         */
+        async function loadProfileData() {
+            if (!currentUserId) {
+                window.location.href = getAbsoluteUrl('/login');
+                return;
+            }
+            
+            const summaryElement = document.getElementById('onboarding-summary');
+            summaryElement.innerHTML = '<p>Fetching data...</p>';
+            
+            try {
+                const url = getAbsoluteUrl(`/api/profile/${currentUserId}`);
+                const profile = await apiFetch(url, 'GET');
+
+                // Populate Profile Form
+                document.getElementById('name').value = profile.name || '';
+                document.getElementById('email').value = profile.email || '';
+                // Note: The new_password input is cleared by default in the HTML
+
+                // Populate Onboarding Summary
+                const onboarding = profile.onboarding || {};
+                let summaryHTML = '<h3>Financial Summary from Onboarding:</h3>';
+                
+                if (Object.keys(onboarding).length === 0 || !onboarding.monthly_net_salary) {
+                     summaryHTML += '<p style="color: red; font-weight: bold;">Onboarding data is incomplete. Please click "Edit Onboarding Data".</p>';
+                } else {
+                    summaryHTML += `<p><strong>Net Salary:</strong> $${(onboarding.monthly_net_salary || 0).toLocaleString()}</p>`;
+                    summaryHTML += `<p><strong>Total Savings:</strong> $${(onboarding.total_liquid_savings || 0).toLocaleString()}</p>`;
+                    summaryHTML += `<p><strong>Total Debt:</strong> $${(onboarding.total_debt_amount || 0).toLocaleString()}</p>`;
+                    summaryHTML += `<p><strong>Primary Goal:</strong> ${onboarding.financial_goals || 'Not set.'}</p>`;
+                }
+                
+                summaryElement.innerHTML = summaryHTML;
+                
+            } catch (error) {
+                console.error("Error loading profile:", error);
+                summaryElement.innerHTML = '<p style="color: red;">Failed to load profile data.</p>';
+            }
+        }
+
+        /**
+         * Handles the form submission for updating basic profile information.
+         */
+        async function handleProfileSave(event) {
+            event.preventDefault();
+            showMessage('clear', ''); // Clear previous messages
+            setLoading(true);
+
+            const form = event.target;
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+            
+            // Prepare payload
+            const payload = {
+                name: data.name,
+                email: data.email,
+                user_id: currentUserId // Required for login_required decorator
+            };
+            
+            // Only include password if it was entered
+            if (data.password) {
+                payload.password = data.password;
+            }
+
+            try {
+                const url = getAbsoluteUrl(`/api/profile/${currentUserId}`);
+                const response = await apiFetch(url, 'POST', payload);
+
+                if (response.success) {
+                    showMessage('success', 'Profile updated successfully!');
+                    // Clear password field after successful update
+                    document.getElementById('new_password').value = ''; 
+                    // Reload data in case name/email changed
+                    loadProfileData(); 
+                } else {
+                    throw new Error(response.message || 'Failed to update profile.');
+                }
+            } catch (error) {
+                console.error("Save failed:", error);
+                showMessage('error', error.message || 'A network error occurred.');
+            } finally {
+                setLoading(false);
+            }
+        }
+        
+        // --- Initialization ---
+        document.addEventListener('DOMContentLoaded', () => {
+            if (!currentUserId) {
+                 window.location.href = getAbsoluteUrl('/login');
+                 return;
+            }
+            
+            loadProfileData();
+            document.getElementById('profile-form').addEventListener('submit', handleProfileSave);
+            
+            // Logout functionality (from utils.js)
+            document.getElementById('logout-link').addEventListener('click', (e) => {
+                e.preventDefault();
+                clearUserSession();
+                window.location.href = getAbsoluteUrl('/login');
+            });
+        });
+    </script>
+</body>
+</html>

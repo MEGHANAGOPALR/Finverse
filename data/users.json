@@ -1,0 +1,68 @@
+{
+    "1b8de638-0199-48d7-bc3a-b7c412796120": {
+        "id": "1b8de638-0199-48d7-bc3a-b7c412796120",
+        "name": "Demo User",
+        "email": "demo@finny.com",
+        "password_hash": "scrypt:32768:8:1$0fY8e6W9yvxZoShW$7d0ab71a1ecb66efcc481d82259f5f23567082d08aaee16a9b9a57977f7c5c0ffa4d7dc95cf8b9a4372e571b3dd390351efbfcd385cd963f6ffe16aa989eefa8",
+        "created_at": "2025-11-19T09:01:08.678223",
+        "onboarding": {
+            "age": 0,
+            "monthly_net_salary": 260000,
+            "annual_gross_income": 3120000,
+            "monthly_expenditure": 30000,
+            "other_monthly_income": 5000,
+            "total_liquid_savings": 15000,
+            "emergency_fund_months": 0,
+            "total_debt_amount": 10000,
+            "average_interest_rate": 12,
+            "risk_tolerance_level": 7,
+            "financial_goals": "start an emergency fund, Retire by 50, Save for a house",
+            "has_emergency_fund": false,
+            "has_debt": true
+        }
+    },
+    "c9fe3124-ca22-4aba-944e-09b53536b54e": {
+        "id": "c9fe3124-ca22-4aba-944e-09b53536b54e",
+        "name": "ASDF",
+        "email": "john@email.com",
+        "password_hash": "scrypt:32768:8:1$ootCX5p0N80Jl7Wg$75f251163f9ef8a965f65d4eacc38e680672135d9c0420f61f79c5d84fea558e3e8ff2018a6e9291410d870f5b7c040ecd0a6f0b80841d14b39a3e15489f92de",
+        "created_at": "2025-11-24T18:26:34.428650",
+        "onboarding": {
+            "age": 0,
+            "monthly_net_salary": 53250,
+            "annual_gross_income": 639000,
+            "monthly_expenditure": 532,
+            "other_monthly_income": 2532,
+            "total_liquid_savings": 523,
+            "emergency_fund_months": 0,
+            "total_debt_amount": 0,
+            "average_interest_rate": 0,
+            "risk_tolerance_level": 3,
+            "financial_goals": "",
+            "has_emergency_fund": false,
+            "has_debt": false
+        }
+    },
+    "35abf7be-7e0d-420d-8c38-43ef7ed783c1": {
+        "id": "35abf7be-7e0d-420d-8c38-43ef7ed783c1",
+        "name": "Lakshita",
+        "email": "liz123@gmail.com",
+        "password_hash": "scrypt:32768:8:1$Xf6z1PFAPQADRV4d$286770048dc5e3f81bdeb9407f3b12d22c8d2cb860c32843e0547f0b1dfaa458e1cc506ad52f0268ea79917991e57dbd4c18ca86daa9021da93a0c809345f691",
+        "created_at": "2025-12-11T13:07:55.623930",
+        "onboarding": {
+            "age": 0,
+            "monthly_net_salary": 260000,
+            "annual_gross_income": 3120000,
+            "monthly_expenditure": 30000,
+            "other_monthly_income": 5000,
+            "total_liquid_savings": 15000,
+            "emergency_fund_months": 3,
+            "total_debt_amount": 20000,
+            "average_interest_rate": 5,
+            "risk_tolerance_level": 7,
+            "financial_goals": "start an emergency fund, Retire by 50, Save for a house",
+            "has_emergency_fund": true,
+            "has_debt": true
+        }
+    }
+}

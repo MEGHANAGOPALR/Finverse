@@ -1,0 +1,10 @@
+# requirements.txt file location: my-chatbot-app/requirements.txt
+
+# The core web framework
+Flask==3.0.3 
+# For securely hashing passwords
+Werkzeug==3.0.3
+# For loading environment variables from the .env file
+python-dotenv==1.0.1
+# pandas is removed to avoid C++ build tool dependencies
+google-generativeai==0.8.3

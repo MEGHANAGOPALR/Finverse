@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finny - Login/Signup</title>
+    <style>
+        /* Classy, neat, professional color scheme */
+        :root {
+            --primary-color: #059669; /* Emerald Green */
+            --background-color: #f7f9fb; /* Light background */
+            --card-background: #ffffff; /* White cards */
+            --text-color: #374151; /* Dark Gray text */
+            --input-border: #d1d5db;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --error-color: #ef4444;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--background-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: var(--text-color);
+        }
+
+        .auth-container {
+            max-width: 400px;
+            width: 90%;
+            background-color: var(--card-background);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 2rem;
+        }
+
+        p.subtitle {
+            margin-bottom: 2rem;
+            color: #6b7280;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.3rem;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        input[type="email"],
+        input[type="password"],
+        input[type="text"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--input-border);
+            border-radius: 6px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 1px var(--primary-color);
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 0.5rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            background-color: #047857;
+        }
+
+        .btn-primary:disabled {
+            background-color: #a7f3d0;
+            cursor: not-allowed;
+        }
+        
+        .toggle-auth {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .toggle-auth a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .error-message {
+            color: white;
+            background-color: var(--error-color);
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            display: none;
+            font-size: 0.9rem;
+        }
+        
+        /* Tab functionality CSS */
+        .tab-buttons {
+            display: flex;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--input-border);
+        }
+
+        .tab-button {
+            flex-grow: 1;
+            padding: 10px 0;
+            cursor: pointer;
+            font-weight: bold;
+            color: #6b7280;
+            border: none;
+            background: none;
+            border-bottom: 3px solid transparent;
+            transition: color 0.2s, border-bottom-color 0.2s;
+        }
+
+        .tab-button.active {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <h1>Finny AI</h1>
+        <p class="subtitle">Your Personal Financial Planner</p>
+        
+        <div class="tab-buttons">
+            <button class="tab-button active" onclick="showTab('login')">Log In</button>
+            <button class="tab-button" onclick="showTab('signup')">Sign Up</button>
+        </div>
+        
+        <div id="error-message" class="error-message"></div>
+
+        <div id="login-tab" class="tab-content active">
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="password" required>
+                </div>
+                <button type="submit" id="login-button" class="btn-primary">Log In</button>
+            </form>
+        </div>
+
+        <div id="signup-tab" class="tab-content">
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm_password" required>
+                </div>
+                <button type="submit" id="signup-button" class="btn-primary">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            // Deactivate all tab buttons
+            document.querySelectorAll('.tab-button').forEach(el => el.classList.remove('active'));
+
+            // Show the selected tab content
+            document.getElementById(tabId + '-tab').classList.add('active');
+            // Activate the corresponding button
+            document.querySelector(`.tab-button[onclick*="${tabId}"]`).classList.add('active');
+            
+            // Clear error messages when switching tabs
+            document.getElementById('error-message').style.display = 'none';
+        }
+    </script>
+    <script type="module" src="/static/js/auth.js"></script>
+</body>
+</html>

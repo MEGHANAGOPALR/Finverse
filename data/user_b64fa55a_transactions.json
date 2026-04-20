@@ -1,0 +1,1802 @@
+[
+  {
+    "date": "2025-07-27",
+    "description": "Fixed Deposit",
+    "amount": 3788.82,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-09-04",
+    "description": "Vegetable Market",
+    "amount": 4244.94,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-04-22",
+    "description": "Movie",
+    "amount": 2112.06,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-08-01",
+    "description": "Internet Bill",
+    "amount": 4585.31,
+    "category": "Bills"
+  },
+  {
+    "date": "2025-08-08",
+    "description": "Gadgets",
+    "amount": 335.79,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-05-27",
+    "description": "Cab Ride",
+    "amount": 4545.21,
+    "category": "Transport"
+  },
+  {
+    "date": "2025-09-07",
+    "description": "Books",
+    "amount": 4064.81,
+    "category": "Education"
+  },
+  {
+    "date": "2025-09-06",
+    "description": "Accessories",
+    "amount": 3976.89,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-10-08",
+    "description": "Dairy Products",
+    "amount": 2446.59,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-04-21",
+    "description": "Monthly Rent Payment",
+    "amount": 2577.26,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-05-14",
+    "description": "Cab Ride",
+    "amount": 4277.93,
+    "category": "Transport"
+  },
+  {
+    "date": "2025-07-11",
+    "description": "Cafe",
+    "amount": 2723.43,
+    "category": "Food"
+  },
+  {
+    "date": "2025-08-24",
+    "description": "Phone Plan",
+    "amount": 1119.76,
+    "category": "Bills"
+  },
+  {
+    "date": "2025-10-04",
+    "description": "Books",
+    "amount": 842.93,
+    "category": "Education"
+  },
+  {
+    "date": "2025-09-12",
+    "description": "Exam Fee",
+    "amount": 2674.41,
+    "category": "Education"
+  },
+  {
+    "date": "2025-05-18",
+    "description": "Streaming Subscription",
+    "amount": 2032.35,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-05-04",
+    "description": "Phone Plan",
+    "amount": 2045.33,
+    "category": "Bills"
+  },
+  {
+    "date": "2025-07-30",
+    "description": "Cafe",
+    "amount": 1843.01,
+    "category": "Food"
+  },
+  {
+    "date": "2025-08-06",
+    "description": "Amusement Park",
+    "amount": 620.11,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-07-21",
+    "description": "Fast Food",
+    "amount": 827.08,
+    "category": "Food"
+  },
+  {
+    "date": "2025-09-27",
+    "description": "Bus Ticket",
+    "amount": 4162.25,
+    "category": "Transport"
+  },
+  {
+    "date": "2025-08-15",
+    "description": "Movie",
+    "amount": 535.82,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-09-16",
+    "description": "Monthly Rent Payment",
+    "amount": 1520.46,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-05-19",
+    "description": "Workshop Fee",
+    "amount": 1411.02,
+    "category": "Education"
+  },
+  {
+    "date": "2025-09-13",
+    "description": "Water Bill",
+    "amount": 545.72,
+    "category": "Bills"
+  },
+  {
+    "date": "2025-08-11",
+    "description": "Books",
+    "amount": 4836.07,
+    "category": "Education"
+  },
+  {
+    "date": "2025-06-17",
+    "description": "Gadgets",
+    "amount": 2129.58,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-10-01",
+    "description": "Vegetable Market",
+    "amount": 2366.62,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-09-19",
+    "description": "Fuel",
+    "amount": 4136.93,
+    "category": "Transport"
+  },
+  {
+    "date": "2025-07-19",
+    "description": "Cab Ride",
+    "amount": 144.91,
+    "category": "Transport"
+  },
+  {
+    "date": "2025-07-10",
+    "description": "Shoes",
+    "amount": 3776.09,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-05-03",
+    "description": "Mutual Fund",
+    "amount": 1743.23,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-06-18",
+    "description": "Electricity Bill",
+    "amount": 1565.62,
+    "category": "Bills"
+  },
+  {
+    "date": "2025-07-08",
+    "description": "Online Order",
+    "amount": 1691.45,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-09-01",
+    "description": "Doctor Visit",
+    "amount": 306.36,
+    "category": "Health"
+  },
+  {
+    "date": "2025-10-11",
+    "description": "Shoes",
+    "amount": 174.2,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-07-13",
+    "description": "Amusement Park",
+    "amount": 811.58,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-09-19",
+    "description": "Pharmacy Purchase",
+    "amount": 3472.67,
+    "category": "Health"
+  },
+  {
+    "date": "2025-07-13",
+    "description": "Movie",
+    "amount": 4527.35,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-06-12",
+    "description": "Workshop Fee",
+    "amount": 434.34,
+    "category": "Education"
+  },
+  {
+    "date": "2025-06-24",
+    "description": "Online Course",
+    "amount": 4929.61,
+    "category": "Education"
+  },
+  {
+    "date": "2025-09-29",
+    "description": "Investment",
+    "amount": 288.74,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-05-20",
+    "description": "Clothes",
+    "amount": 1744.0,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-09-04",
+    "description": "Bakery",
+    "amount": 1487.49,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-04-18",
+    "description": "Monthly Rent Payment",
+    "amount": 3948.15,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-08-21",
+    "description": "Monthly Rent Payment",
+    "amount": 1880.32,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-09-14",
+    "description": "Online Order",
+    "amount": 876.97,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-05-01",
+    "description": "Supermarket",
+    "amount": 3606.1,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-07-11",
+    "description": "Emergency Fund",
+    "amount": 801.0,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-06-02",
+    "description": "Mutual Fund",
+    "amount": 4650.45,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-09-30",
+    "description": "Fast Food",
+    "amount": 710.21,
+    "category": "Food"
+  },
+  {
+    "date": "2025-06-08",
+    "description": "Metro Card",
+    "amount": 602.02,
+    "category": "Transport"
+  },
+  {
+    "date": "2025-07-08",
+    "description": "Health Insurance",
+    "amount": 4117.87,
+    "category": "Health"
+  },
+  {
+    "date": "2025-06-04",
+    "description": "Cafe",
+    "amount": 1755.38,
+    "category": "Food"
+  },
+  {
+    "date": "2025-07-04",
+    "description": "Monthly Rent Payment",
+    "amount": 3391.01,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-09-11",
+    "description": "Monthly Rent Payment",
+    "amount": 1418.13,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-05-22",
+    "description": "Monthly Rent Payment",
+    "amount": 324.98,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-04-24",
+    "description": "Dairy Products",
+    "amount": 3307.84,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-08-24",
+    "description": "Bakery",
+    "amount": 2902.9,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-08-06",
+    "description": "Pharmacy Purchase",
+    "amount": 737.99,
+    "category": "Health"
+  },
+  {
+    "date": "2025-08-08",
+    "description": "Phone Plan",
+    "amount": 518.09,
+    "category": "Bills"
+  },
+  {
+    "date": "2025-04-19",
+    "description": "Monthly Rent Payment",
+    "amount": 3189.74,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-04-15",
+    "description": "Metro Card",
+    "amount": 235.74,
+    "category": "Transport"
+  },
+  {
+    "date": "2025-09-13",
+    "description": "Monthly Rent Payment",
+    "amount": 4105.82,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-05-06",
+    "description": "Fixed Deposit",
+    "amount": 420.66,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-04-21",
+    "description": "Internet Bill",
+    "amount": 2186.78,
+    "category": "Bills"
+  },
+  {
+    "date": "2025-07-28",
+    "description": "Fixed Deposit",
+    "amount": 2440.8,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-05-04",
+    "description": "Fuel",
+    "amount": 4317.37,
+    "category": "Transport"
+  },
+  {
+    "date": "2025-08-26",
+    "description": "Monthly Rent Payment",
+    "amount": 3309.86,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-08-18",
+    "description": "Fast Food",
+    "amount": 658.12,
+    "category": "Food"
+  },
+  {
+    "date": "2025-07-25",
+    "description": "Monthly Rent Payment",
+    "amount": 1527.02,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-10-10",
+    "description": "Bakery",
+    "amount": 2619.25,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-04-28",
+    "description": "Dairy Products",
+    "amount": 3360.88,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-08-24",
+    "description": "Dairy Products",
+    "amount": 818.39,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-06-18",
+    "description": "Electricity Bill",
+    "amount": 3713.74,
+    "category": "Bills"
+  },
+  {
+    "date": "2025-06-11",
+    "description": "Monthly Rent Payment",
+    "amount": 3670.25,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-08-17",
+    "description": "Health Insurance",
+    "amount": 2051.04,
+    "category": "Health"
+  },
+  {
+    "date": "2025-07-09",
+    "description": "Metro Card",
+    "amount": 4799.17,
+    "category": "Transport"
+  },
+  {
+    "date": "2025-05-11",
+    "description": "Pharmacy Purchase",
+    "amount": 4922.63,
+    "category": "Health"
+  },
+  {
+    "date": "2025-08-20",
+    "description": "Shoes",
+    "amount": 4177.2,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-04-17",
+    "description": "Pharmacy Purchase",
+    "amount": 2341.08,
+    "category": "Health"
+  },
+  {
+    "date": "2025-07-13",
+    "description": "Gym Membership",
+    "amount": 750.45,
+    "category": "Health"
+  },
+  {
+    "date": "2025-08-14",
+    "description": "Bakery",
+    "amount": 467.03,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-05-01",
+    "description": "Doctor Visit",
+    "amount": 3947.52,
+    "category": "Health"
+  },
+  {
+    "date": "2025-07-10",
+    "description": "Monthly Rent Payment",
+    "amount": 4413.98,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-09-09",
+    "description": "Monthly Rent Payment",
+    "amount": 2130.64,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-09-15",
+    "description": "Supermarket",
+    "amount": 4205.66,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-05-17",
+    "description": "Dinner Out",
+    "amount": 728.02,
+    "category": "Food"
+  },
+  {
+    "date": "2025-04-18",
+    "description": "Fixed Deposit",
+    "amount": 4741.94,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-06-28",
+    "description": "Cafe",
+    "amount": 3251.53,
+    "category": "Food"
+  },
+  {
+    "date": "2025-08-03",
+    "description": "Workshop Fee",
+    "amount": 2003.45,
+    "category": "Education"
+  },
+  {
+    "date": "2025-07-22",
+    "description": "Online Course",
+    "amount": 4756.18,
+    "category": "Education"
+  },
+  {
+    "date": "2025-08-16",
+    "description": "Fuel",
+    "amount": 446.06,
+    "category": "Transport"
+  },
+  {
+    "date": "2025-09-05",
+    "description": "Workshop Fee",
+    "amount": 1298.15,
+    "category": "Education"
+  },
+  {
+    "date": "2025-09-15",
+    "description": "Phone Plan",
+    "amount": 4587.0,
+    "category": "Bills"
+  },
+  {
+    "date": "2025-04-25",
+    "description": "Amusement Park",
+    "amount": 232.11,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-09-17",
+    "description": "Metro Card",
+    "amount": 1183.86,
+    "category": "Transport"
+  },
+  {
+    "date": "2025-07-24",
+    "description": "Books",
+    "amount": 1059.85,
+    "category": "Education"
+  },
+  {
+    "date": "2025-05-02",
+    "description": "Monthly Rent Payment",
+    "amount": 928.77,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-07-16",
+    "description": "Snacks",
+    "amount": 602.59,
+    "category": "Food"
+  },
+  {
+    "date": "2025-10-03",
+    "description": "Mutual Fund",
+    "amount": 3454.44,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-04-19",
+    "description": "Electricity Bill",
+    "amount": 2056.74,
+    "category": "Bills"
+  },
+  {
+    "date": "2025-04-20",
+    "description": "Monthly Rent Payment",
+    "amount": 3205.59,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-09-22",
+    "description": "Monthly Rent Payment",
+    "amount": 4169.02,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-04-28",
+    "description": "Emergency Fund",
+    "amount": 4384.79,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-08-11",
+    "description": "Dinner Out",
+    "amount": 2413.47,
+    "category": "Food"
+  },
+  {
+    "date": "2025-07-24",
+    "description": "Health Insurance",
+    "amount": 736.94,
+    "category": "Health"
+  },
+  {
+    "date": "2025-07-06",
+    "description": "Movie",
+    "amount": 2462.38,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-09-07",
+    "description": "Fuel",
+    "amount": 1095.17,
+    "category": "Transport"
+  },
+  {
+    "date": "2025-10-06",
+    "description": "Snacks",
+    "amount": 975.54,
+    "category": "Food"
+  },
+  {
+    "date": "2025-05-03",
+    "description": "Movie",
+    "amount": 1609.5,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-08-18",
+    "description": "Doctor Visit",
+    "amount": 3878.77,
+    "category": "Health"
+  },
+  {
+    "date": "2025-08-09",
+    "description": "Supermarket",
+    "amount": 2656.37,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-08-27",
+    "description": "Monthly Rent Payment",
+    "amount": 221.99,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-04-14",
+    "description": "Supermarket",
+    "amount": 4071.58,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-05-21",
+    "description": "Vegetable Market",
+    "amount": 2307.51,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-07-08",
+    "description": "Bike Maintenance",
+    "amount": 264.76,
+    "category": "Transport"
+  },
+  {
+    "date": "2025-08-25",
+    "description": "Books",
+    "amount": 2915.37,
+    "category": "Education"
+  },
+  {
+    "date": "2025-07-10",
+    "description": "Phone Plan",
+    "amount": 1038.37,
+    "category": "Bills"
+  },
+  {
+    "date": "2025-08-08",
+    "description": "Clothes",
+    "amount": 3740.77,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-05-10",
+    "description": "Amusement Park",
+    "amount": 3749.0,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-08-25",
+    "description": "Online Order",
+    "amount": 523.09,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-08-30",
+    "description": "Accessories",
+    "amount": 602.77,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-08-25",
+    "description": "Gadgets",
+    "amount": 434.1,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-05-15",
+    "description": "Accessories",
+    "amount": 2666.79,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-07-31",
+    "description": "Gym Membership",
+    "amount": 4259.79,
+    "category": "Health"
+  },
+  {
+    "date": "2025-06-17",
+    "description": "Monthly Rent Payment",
+    "amount": 2754.05,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-07-03",
+    "description": "Movie",
+    "amount": 4360.91,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-05-19",
+    "description": "Movie",
+    "amount": 2197.83,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-08-04",
+    "description": "Snacks",
+    "amount": 1113.26,
+    "category": "Food"
+  },
+  {
+    "date": "2025-05-20",
+    "description": "Bus Ticket",
+    "amount": 2176.85,
+    "category": "Transport"
+  },
+  {
+    "date": "2025-07-17",
+    "description": "Vegetable Market",
+    "amount": 2020.92,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-05-23",
+    "description": "Water Bill",
+    "amount": 4851.6,
+    "category": "Bills"
+  },
+  {
+    "date": "2025-07-20",
+    "description": "Investment",
+    "amount": 494.49,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-05-31",
+    "description": "Doctor Visit",
+    "amount": 3075.86,
+    "category": "Health"
+  },
+  {
+    "date": "2025-06-05",
+    "description": "Vegetable Market",
+    "amount": 3923.94,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-04-15",
+    "description": "Streaming Subscription",
+    "amount": 1053.05,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-04-15",
+    "description": "Monthly Rent Payment",
+    "amount": 4583.06,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-05-12",
+    "description": "Health Insurance",
+    "amount": 4146.89,
+    "category": "Health"
+  },
+  {
+    "date": "2025-10-02",
+    "description": "Health Insurance",
+    "amount": 2053.94,
+    "category": "Health"
+  },
+  {
+    "date": "2025-06-21",
+    "description": "Books",
+    "amount": 2548.92,
+    "category": "Education"
+  },
+  {
+    "date": "2025-08-22",
+    "description": "Monthly Rent Payment",
+    "amount": 1144.74,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-04-18",
+    "description": "Water Bill",
+    "amount": 346.97,
+    "category": "Bills"
+  },
+  {
+    "date": "2025-09-14",
+    "description": "Game Purchase",
+    "amount": 3857.64,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-08-28",
+    "description": "Internet Bill",
+    "amount": 669.21,
+    "category": "Bills"
+  },
+  {
+    "date": "2025-04-19",
+    "description": "Bus Ticket",
+    "amount": 4969.71,
+    "category": "Transport"
+  },
+  {
+    "date": "2025-07-06",
+    "description": "Concert Ticket",
+    "amount": 1362.61,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-05-09",
+    "description": "Water Bill",
+    "amount": 3757.61,
+    "category": "Bills"
+  },
+  {
+    "date": "2025-06-15",
+    "description": "Metro Card",
+    "amount": 3897.4,
+    "category": "Transport"
+  },
+  {
+    "date": "2025-07-09",
+    "description": "Fast Food",
+    "amount": 4901.97,
+    "category": "Food"
+  },
+  {
+    "date": "2025-07-16",
+    "description": "Health Insurance",
+    "amount": 1342.26,
+    "category": "Health"
+  },
+  {
+    "date": "2025-07-22",
+    "description": "Movie",
+    "amount": 2674.52,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-04-15",
+    "description": "Monthly Rent Payment",
+    "amount": 2386.98,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-07-04",
+    "description": "Phone Plan",
+    "amount": 4078.79,
+    "category": "Bills"
+  },
+  {
+    "date": "2025-04-14",
+    "description": "Dinner Out",
+    "amount": 4522.17,
+    "category": "Food"
+  },
+  {
+    "date": "2025-05-23",
+    "description": "Gadgets",
+    "amount": 4539.75,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-09-30",
+    "description": "Exam Fee",
+    "amount": 943.98,
+    "category": "Education"
+  },
+  {
+    "date": "2025-06-27",
+    "description": "Bike Maintenance",
+    "amount": 379.25,
+    "category": "Transport"
+  },
+  {
+    "date": "2025-08-09",
+    "description": "Internet Bill",
+    "amount": 4351.21,
+    "category": "Bills"
+  },
+  {
+    "date": "2025-07-09",
+    "description": "Emergency Fund",
+    "amount": 3331.89,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-08-05",
+    "description": "Amusement Park",
+    "amount": 3693.56,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-09-11",
+    "description": "Monthly Rent Payment",
+    "amount": 1865.02,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-07-19",
+    "description": "Health Insurance",
+    "amount": 4437.26,
+    "category": "Health"
+  },
+  {
+    "date": "2025-07-28",
+    "description": "Monthly Rent Payment",
+    "amount": 1139.87,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-05-02",
+    "description": "Online Order",
+    "amount": 3980.78,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-04-16",
+    "description": "Cafe",
+    "amount": 2045.97,
+    "category": "Food"
+  },
+  {
+    "date": "2025-07-21",
+    "description": "Online Order",
+    "amount": 432.23,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-07-12",
+    "description": "Investment",
+    "amount": 1772.0,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-06-22",
+    "description": "Vegetable Market",
+    "amount": 3559.0,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-09-17",
+    "description": "Gadgets",
+    "amount": 4975.28,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-07-09",
+    "description": "Doctor Visit",
+    "amount": 1713.94,
+    "category": "Health"
+  },
+  {
+    "date": "2025-05-10",
+    "description": "Investment",
+    "amount": 2917.01,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-05-26",
+    "description": "Emergency Fund",
+    "amount": 1442.2,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-05-16",
+    "description": "Monthly Rent Payment",
+    "amount": 3657.97,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-07-17",
+    "description": "Doctor Visit",
+    "amount": 4036.76,
+    "category": "Health"
+  },
+  {
+    "date": "2025-08-05",
+    "description": "Metro Card",
+    "amount": 3721.79,
+    "category": "Transport"
+  },
+  {
+    "date": "2025-05-23",
+    "description": "Fixed Deposit",
+    "amount": 4260.71,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-09-14",
+    "description": "Internet Bill",
+    "amount": 173.97,
+    "category": "Bills"
+  },
+  {
+    "date": "2025-04-20",
+    "description": "Fixed Deposit",
+    "amount": 1651.22,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-05-05",
+    "description": "Amusement Park",
+    "amount": 1600.45,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-06-01",
+    "description": "Exam Fee",
+    "amount": 533.76,
+    "category": "Education"
+  },
+  {
+    "date": "2025-04-21",
+    "description": "Concert Ticket",
+    "amount": 1188.64,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-05-22",
+    "description": "Dairy Products",
+    "amount": 4810.16,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-05-09",
+    "description": "Metro Card",
+    "amount": 4476.01,
+    "category": "Transport"
+  },
+  {
+    "date": "2025-10-09",
+    "description": "Exam Fee",
+    "amount": 3703.84,
+    "category": "Education"
+  },
+  {
+    "date": "2025-06-18",
+    "description": "Books",
+    "amount": 4879.81,
+    "category": "Education"
+  },
+  {
+    "date": "2025-06-13",
+    "description": "Pharmacy Purchase",
+    "amount": 1070.57,
+    "category": "Health"
+  },
+  {
+    "date": "2025-09-09",
+    "description": "Doctor Visit",
+    "amount": 1172.09,
+    "category": "Health"
+  },
+  {
+    "date": "2025-08-03",
+    "description": "Internet Bill",
+    "amount": 1391.24,
+    "category": "Bills"
+  },
+  {
+    "date": "2025-06-26",
+    "description": "Electricity Bill",
+    "amount": 1469.74,
+    "category": "Bills"
+  },
+  {
+    "date": "2025-09-20",
+    "description": "Pharmacy Purchase",
+    "amount": 3356.67,
+    "category": "Health"
+  },
+  {
+    "date": "2025-04-23",
+    "description": "Doctor Visit",
+    "amount": 275.22,
+    "category": "Health"
+  },
+  {
+    "date": "2025-06-17",
+    "description": "Fuel",
+    "amount": 3422.46,
+    "category": "Transport"
+  },
+  {
+    "date": "2025-06-05",
+    "description": "Cab Ride",
+    "amount": 1227.3,
+    "category": "Transport"
+  },
+  {
+    "date": "2025-05-06",
+    "description": "Books",
+    "amount": 2978.8,
+    "category": "Education"
+  },
+  {
+    "date": "2025-07-25",
+    "description": "Online Course",
+    "amount": 4382.25,
+    "category": "Education"
+  },
+  {
+    "date": "2025-07-06",
+    "description": "Workshop Fee",
+    "amount": 4736.25,
+    "category": "Education"
+  },
+  {
+    "date": "2025-06-27",
+    "description": "Amusement Park",
+    "amount": 1232.08,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-06-15",
+    "description": "Concert Ticket",
+    "amount": 482.99,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-04-14",
+    "description": "Health Insurance",
+    "amount": 2161.53,
+    "category": "Health"
+  },
+  {
+    "date": "2025-09-09",
+    "description": "Exam Fee",
+    "amount": 1432.54,
+    "category": "Education"
+  },
+  {
+    "date": "2025-05-09",
+    "description": "Bakery",
+    "amount": 4982.44,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-07-17",
+    "description": "Workshop Fee",
+    "amount": 548.28,
+    "category": "Education"
+  },
+  {
+    "date": "2025-07-19",
+    "description": "Movie",
+    "amount": 962.95,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-10-05",
+    "description": "Books",
+    "amount": 610.61,
+    "category": "Education"
+  },
+  {
+    "date": "2025-07-23",
+    "description": "Bus Ticket",
+    "amount": 4393.53,
+    "category": "Transport"
+  },
+  {
+    "date": "2025-07-12",
+    "description": "Shoes",
+    "amount": 1041.62,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-09-29",
+    "description": "Bakery",
+    "amount": 1640.06,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-06-07",
+    "description": "Accessories",
+    "amount": 2521.3,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-09-15",
+    "description": "Gym Membership",
+    "amount": 4759.21,
+    "category": "Health"
+  },
+  {
+    "date": "2025-05-25",
+    "description": "Workshop Fee",
+    "amount": 1263.39,
+    "category": "Education"
+  },
+  {
+    "date": "2025-07-14",
+    "description": "Dinner Out",
+    "amount": 4146.27,
+    "category": "Food"
+  },
+  {
+    "date": "2025-10-03",
+    "description": "Shoes",
+    "amount": 4269.02,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-05-14",
+    "description": "Online Course",
+    "amount": 126.93,
+    "category": "Education"
+  },
+  {
+    "date": "2025-04-29",
+    "description": "Investment",
+    "amount": 882.68,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-08-04",
+    "description": "Workshop Fee",
+    "amount": 450.03,
+    "category": "Education"
+  },
+  {
+    "date": "2025-09-03",
+    "description": "Vegetable Market",
+    "amount": 3172.51,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-05-03",
+    "description": "Investment",
+    "amount": 3186.3,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-08-23",
+    "description": "Phone Plan",
+    "amount": 1829.13,
+    "category": "Bills"
+  },
+  {
+    "date": "2025-06-03",
+    "description": "Bike Maintenance",
+    "amount": 3815.83,
+    "category": "Transport"
+  },
+  {
+    "date": "2025-09-09",
+    "description": "Amusement Park",
+    "amount": 2161.48,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-05-30",
+    "description": "Online Order",
+    "amount": 4077.43,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-04-24",
+    "description": "Concert Ticket",
+    "amount": 4822.01,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-05-28",
+    "description": "Exam Fee",
+    "amount": 574.82,
+    "category": "Education"
+  },
+  {
+    "date": "2025-09-14",
+    "description": "Phone Plan",
+    "amount": 4560.72,
+    "category": "Bills"
+  },
+  {
+    "date": "2025-08-21",
+    "description": "Emergency Fund",
+    "amount": 4273.64,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-06-05",
+    "description": "Investment",
+    "amount": 800.42,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-08-07",
+    "description": "Dairy Products",
+    "amount": 914.86,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-06-17",
+    "description": "Supermarket",
+    "amount": 574.91,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-06-25",
+    "description": "Monthly Rent Payment",
+    "amount": 4478.64,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-05-02",
+    "description": "Movie",
+    "amount": 2706.53,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-06-14",
+    "description": "Gym Membership",
+    "amount": 982.76,
+    "category": "Health"
+  },
+  {
+    "date": "2025-08-17",
+    "description": "Bike Maintenance",
+    "amount": 2215.22,
+    "category": "Transport"
+  },
+  {
+    "date": "2025-08-23",
+    "description": "Phone Plan",
+    "amount": 3184.75,
+    "category": "Bills"
+  },
+  {
+    "date": "2025-05-15",
+    "description": "Fixed Deposit",
+    "amount": 2709.18,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-08-08",
+    "description": "Bakery",
+    "amount": 1132.16,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-05-27",
+    "description": "Amusement Park",
+    "amount": 272.7,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-08-18",
+    "description": "Emergency Fund",
+    "amount": 2682.59,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-09-08",
+    "description": "Accessories",
+    "amount": 4066.88,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-09-07",
+    "description": "Doctor Visit",
+    "amount": 782.08,
+    "category": "Health"
+  },
+  {
+    "date": "2025-06-27",
+    "description": "Electricity Bill",
+    "amount": 1939.05,
+    "category": "Bills"
+  },
+  {
+    "date": "2025-09-20",
+    "description": "Supermarket",
+    "amount": 3775.55,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-08-30",
+    "description": "Emergency Fund",
+    "amount": 4615.89,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-04-26",
+    "description": "Fixed Deposit",
+    "amount": 3746.18,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-09-22",
+    "description": "Monthly Rent Payment",
+    "amount": 963.37,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-05-15",
+    "description": "Monthly Rent Payment",
+    "amount": 980.07,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-06-21",
+    "description": "Monthly Rent Payment",
+    "amount": 2781.04,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-04-14",
+    "description": "Mutual Fund",
+    "amount": 3640.75,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-04-15",
+    "description": "Investment",
+    "amount": 1080.53,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-08-31",
+    "description": "Supermarket",
+    "amount": 4794.25,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-08-11",
+    "description": "Books",
+    "amount": 4625.94,
+    "category": "Education"
+  },
+  {
+    "date": "2025-08-22",
+    "description": "Exam Fee",
+    "amount": 1932.62,
+    "category": "Education"
+  },
+  {
+    "date": "2025-05-03",
+    "description": "Fixed Deposit",
+    "amount": 4372.36,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-09-18",
+    "description": "Streaming Subscription",
+    "amount": 1751.28,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-05-16",
+    "description": "Mutual Fund",
+    "amount": 431.14,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-05-30",
+    "description": "Bakery",
+    "amount": 2626.64,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-05-08",
+    "description": "Restaurant",
+    "amount": 3323.08,
+    "category": "Food"
+  },
+  {
+    "date": "2025-06-13",
+    "description": "Cafe",
+    "amount": 4527.35,
+    "category": "Food"
+  },
+  {
+    "date": "2025-06-11",
+    "description": "Exam Fee",
+    "amount": 2837.45,
+    "category": "Education"
+  },
+  {
+    "date": "2025-09-16",
+    "description": "Restaurant",
+    "amount": 4825.61,
+    "category": "Food"
+  },
+  {
+    "date": "2025-07-19",
+    "description": "Investment",
+    "amount": 4459.18,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-10-03",
+    "description": "Internet Bill",
+    "amount": 4879.31,
+    "category": "Bills"
+  },
+  {
+    "date": "2025-09-26",
+    "description": "Gadgets",
+    "amount": 2954.56,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-06-04",
+    "description": "Exam Fee",
+    "amount": 1192.05,
+    "category": "Education"
+  },
+  {
+    "date": "2025-09-02",
+    "description": "Monthly Rent Payment",
+    "amount": 2581.26,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-06-23",
+    "description": "Gym Membership",
+    "amount": 2682.53,
+    "category": "Health"
+  },
+  {
+    "date": "2025-07-16",
+    "description": "Internet Bill",
+    "amount": 2246.18,
+    "category": "Bills"
+  },
+  {
+    "date": "2025-09-23",
+    "description": "Cafe",
+    "amount": 3163.94,
+    "category": "Food"
+  },
+  {
+    "date": "2025-07-19",
+    "description": "Streaming Subscription",
+    "amount": 2408.98,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-10-10",
+    "description": "Online Course",
+    "amount": 410.58,
+    "category": "Education"
+  },
+  {
+    "date": "2025-08-11",
+    "description": "Concert Ticket",
+    "amount": 4129.36,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-10-07",
+    "description": "Doctor Visit",
+    "amount": 885.86,
+    "category": "Health"
+  },
+  {
+    "date": "2025-07-28",
+    "description": "Monthly Rent Payment",
+    "amount": 4021.77,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-06-01",
+    "description": "Pharmacy Purchase",
+    "amount": 1330.83,
+    "category": "Health"
+  },
+  {
+    "date": "2025-09-30",
+    "description": "Restaurant",
+    "amount": 4252.47,
+    "category": "Food"
+  },
+  {
+    "date": "2025-05-15",
+    "description": "Investment",
+    "amount": 3197.24,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-09-19",
+    "description": "Shoes",
+    "amount": 1237.84,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-08-04",
+    "description": "Shoes",
+    "amount": 784.89,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-10-02",
+    "description": "Investment",
+    "amount": 3515.29,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-05-24",
+    "description": "Supermarket",
+    "amount": 2256.04,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-07-28",
+    "description": "Clothes",
+    "amount": 1170.49,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-08-06",
+    "description": "Emergency Fund",
+    "amount": 877.82,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-08-01",
+    "description": "Fuel",
+    "amount": 978.63,
+    "category": "Transport"
+  },
+  {
+    "date": "2025-06-26",
+    "description": "Monthly Rent Payment",
+    "amount": 4454.51,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-08-07",
+    "description": "Electricity Bill",
+    "amount": 677.39,
+    "category": "Bills"
+  },
+  {
+    "date": "2025-08-08",
+    "description": "Streaming Subscription",
+    "amount": 3110.48,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-04-25",
+    "description": "Supermarket",
+    "amount": 1284.49,
+    "category": "Groceries"
+  },
+  {
+    "date": "2025-09-19",
+    "description": "Restaurant",
+    "amount": 589.49,
+    "category": "Food"
+  },
+  {
+    "date": "2025-05-24",
+    "description": "Gadgets",
+    "amount": 4291.55,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-06-22",
+    "description": "Fast Food",
+    "amount": 4003.29,
+    "category": "Food"
+  },
+  {
+    "date": "2025-04-19",
+    "description": "Streaming Subscription",
+    "amount": 3633.35,
+    "category": "Entertainment"
+  },
+  {
+    "date": "2025-07-30",
+    "description": "Fixed Deposit",
+    "amount": 2941.71,
+    "category": "Savings"
+  },
+  {
+    "date": "2025-08-17",
+    "description": "Bus Ticket",
+    "amount": 4219.07,
+    "category": "Transport"
+  },
+  {
+    "date": "2025-09-03",
+    "description": "Gadgets",
+    "amount": 4577.92,
+    "category": "Shopping"
+  },
+  {
+    "date": "2025-06-06",
+    "description": "Metro Card",
+    "amount": 1426.33,
+    "category": "Transport"
+  },
+  {
+    "date": "2025-08-09",
+    "description": "Exam Fee",
+    "amount": 2533.45,
+    "category": "Education"
+  },
+  {
+    "date": "2025-05-18",
+    "description": "Dinner Out",
+    "amount": 1965.78,
+    "category": "Food"
+  },
+  {
+    "date": "2025-07-01",
+    "description": "Bus Ticket",
+    "amount": 2926.82,
+    "category": "Transport"
+  },
+  {
+    "date": "2025-09-09",
+    "description": "Monthly Rent Payment",
+    "amount": 982.16,
+    "category": "Rent"
+  },
+  {
+    "date": "2025-06-28",
+    "description": "Monthly Rent Payment",
+    "amount": 3778.52,
+    "category": "Rent"
+  }
+]

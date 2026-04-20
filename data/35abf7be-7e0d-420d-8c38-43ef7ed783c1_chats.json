@@ -1,0 +1,64 @@
+{
+    "budget": {
+        "messages": [
+            {
+                "role": "user",
+                "content": "hi",
+                "timestamp": "2025-12-11T13:18:29.250084"
+            },
+            {
+                "role": "bot",
+                "content": "That's a great question! I'm Finny, your AI financial planner. My current knowledge is based on your profile. Try asking about your **expenses**, **savings goals**, or **debt strategy**.",
+                "timestamp": "2025-12-11T13:18:46.143858"
+            },
+            {
+                "role": "user",
+                "content": "can i invest in stocks?",
+                "timestamp": "2025-12-11T13:19:05.559711"
+            },
+            {
+                "role": "bot",
+                "content": "Your current liquid savings are **\u20b915,000.00**. A good first step is to ensure you have a **HIGH** priority 3-6 month emergency fund. After securing that, look into tax-advantaged investment accounts for **MEDIUM** priority growth.",
+                "timestamp": "2025-12-11T13:19:06.134324"
+            },
+            {
+                "role": "user",
+                "content": "which company stock is ideal",
+                "timestamp": "2025-12-24T12:35:42.049353"
+            },
+            {
+                "role": "bot",
+                "content": "That's a great question! I'm Finny, your AI financial planner. My current knowledge is based on your profile. Try asking about your **expenses**, **savings goals**, or **debt strategy**.",
+                "timestamp": "2025-12-24T12:35:42.448969"
+            }
+        ],
+        "created_at": "2025-12-11T13:18:24.915405",
+        "last_updated": "2025-12-24T12:35:42.448991"
+    },
+    "expense": {
+        "messages": [
+            {
+                "role": "user",
+                "content": "who am i",
+                "timestamp": "2025-12-24T12:31:44.934798"
+            },
+            {
+                "role": "bot",
+                "content": "That's a great question! I'm Finny, your AI financial planner. My current knowledge is based on your profile. Try asking about your **expenses**, **savings goals**, or **debt strategy**.",
+                "timestamp": "2025-12-24T12:31:55.831764"
+            },
+            {
+                "role": "user",
+                "content": "which company stock is for my budget",
+                "timestamp": "2025-12-24T12:35:23.024089"
+            },
+            {
+                "role": "bot",
+                "content": "That's a great question! I'm Finny, your AI financial planner. My current knowledge is based on your profile. Try asking about your **expenses**, **savings goals**, or **debt strategy**.",
+                "timestamp": "2025-12-24T12:35:25.014645"
+            }
+        ],
+        "created_at": "2025-12-24T12:31:28.237246",
+        "last_updated": "2025-12-24T12:35:25.014666"
+    }
+}
