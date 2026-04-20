@@ -1,8 +1,8 @@
-# Finny - AI Financial Planner 💰🤖
+# Finny - AI Financial Planner 
 
 **Finny** is a full-stack personal finance management application that combines data visualization with Artificial Intelligence. It allows users to track their spending habits via CSV uploads and receive personalized financial advice through an integrated AI chatbot powered by Google Gemini.
 
-## 🚀 Features
+##  Features
 
 * **AI Chatbot (Finny):** A context-aware assistant that answers questions based on *your* specific financial data.
 * **Automated Expense Tracking:** Upload your bank/transaction CSVs, and Finny automatically categorizes your spending.
@@ -10,7 +10,7 @@
 * **Secure User Management:** Full Authentication system with password hashing and personalized onboarding.
 * **Lightweight Persistence:** Uses a structured JSON-based file system for easy deployment without the need for a heavy database.
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 **Frontend:**
 
@@ -28,7 +28,7 @@
 
 * Local JSON storage for profiles, chat history, and transactions.
 
-## 📦 Project Structure
+##  Project Structure
 
 ```text
 ├── app.py              # Main Flask Application (Routes & API)
@@ -45,7 +45,7 @@
 
 ```
 
-## ⚙️ Installation & Setup
+##  Installation & Setup
 
 1. **Clone the repository:**
 ```bash
@@ -87,13 +87,13 @@ python app.py
 
 Visit `http://127.0.0.1:5000` in your browser.
 
-## 🔒 Security Features
+##  Security Features
 
 * **Password Protection:** Passwords are never stored in plain text; we use `PBKDF2` hashing via Werkzeug.
 * **Filename Sanitization:** All uploaded CSVs are processed using `secure_filename` to prevent path traversal attacks.
 * **Data Isolation:** Users can only access their own financial data and chat histories via unique UUIDs.
 
-## 📈 Future Scope
+##  Future Scope
 
 * Integration with Plaid/Bank APIs for real-time transaction syncing.
 * Advanced predictive analytics for long-term investment goals.
@@ -101,4 +101,4 @@ Visit `http://127.0.0.1:5000` in your browser.
 
 ---
 
-**Developed for Mini-Project Review 2024/25.**
+
